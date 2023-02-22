@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-TzLRGTT6Uyx94ufA+rw6QJ20lU7N2QosYfbZcRi+fKhdfkHgXK/mT/58GbjfA1N3tdq3oZPujGpE7pwW1e3BA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-HSM2mGjLonhKdT7aRl5GVphc7VfW4jczvE/+NMjKTtEgg7wDBhGJLw7y8dIy4+W6" crossorigin="anonymous">
+  <!-- //bootstrap link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+</head>
+<body>
+  <div id="header" class="header flex-item">
+    <div id="name"></div>
+
+  </div>
+  <div class="main-container">
+    <main >
+      <div class="box-container">
+        <div class="box box-img">
+        </div>
+        <div class="box box-img">
+        </div>
+        <div class="box box-img">
+        </div>
+        <div class="box box-img">
+        </div>
+      </div>
+      
+      <div class="box-container">
+        <div class="box box-bottom-img">
+        </div>
+        <div class="box box-bottom-img">
+        </div>
+        <div class="box box-bottom-img">
+        </div>
+        <div class="box box-bottom-img">
+      </div>
+    </main>
+    
+    <div class="clone-box-container">
+
+    </div>
+    
+  </div>
+
+ <script>
+  $(document).ready(function(){
+    $("body").css("background-color","green")
+    //header
+    $("#header").html("My Portfolio with JQuery").css("color","red").css("font-size","3rem");    
+    //gallery section
+    // $(".box").clone().appendTo(".clone-box-container");
+    $(".box").html("<h3>Project Work</h3>").css("padding","20px").css("font-size","20px");
+    $(".box").css("display","flex").css("justify-content","center");
+    $(".box-img:nth-child(1)").prepend("<img id='img' src='img/html5.svg'/>");
+    $(".box-img:nth-child(2)").prepend("<img id='img' src='img/css3.svg'/>");
+    $(".box-img:nth-child(3)").prepend("<img id='img' src='img/bootstrap.svg'/>");
+    $(".box-img:nth-child(4)").prepend("<img id='img' src='img/js.svg'/>");
+    $(".box-bottom-img:nth-child(1)").prepend("<img id='img' src='img/react.svg'/>");
+    $(".box-bottom-img:nth-child(2)").prepend("<img id='img' src='img/sass.svg'/>");
+    $(".box-bottom-img:nth-child(3)").prepend("<img id='img' src='img/download.png'/>");
+    $(".box-bottom-img:nth-child(4)").prepend("<img id='img' src='img/Redux.png'/>");
+    // $("#img").css("margin-bottom","10px");
+    $("img").css("margin-bottom","10px");
+
+    // giving link attribute
+    let gitUrlJs ="https://github.com/arif2805";
+
+
+  });
+ </script> 
+</body>
+</html>

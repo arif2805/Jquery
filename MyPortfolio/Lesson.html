@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            // $("button").addClass("animated bounce");
+            // $(".well").addClass("animated shake");
+            // $("#target3").addClass("animated fadeOut");
+            //or using one element will with each also can work same
+            //changing value using html tag
+            $("button").addClass("animated");
+            //changing value using class
+            $(".btn").addClass("shake");
+            //changing value using id
+            $("#target1").addClass("btn-primary");
+            //removing value using .removeClass function
+            $("button").removeClass("btn-default");
+            //changing css property 
+            $("#target2").css("color","red");
+            $("#target1").css("color", "blue");
+            //Changing html tags and text inside by JQuery. entire element will be changed
+            $("#target4").html("<em>#target4</em>");
+            //Changing only text inside by JQuery
+            $("#target4").text("#target4");
+            //jQuery has a function called .remove() that will remove an HTML element entirely
+            $("#target4").remove();
+
+            //jQuery has a function called .appendTo() that allows you to select HTML elements and append them to another element.
+            $("#target2").appendTo("#right-well");
+
+            //jQuery has a function called clone() that makes a copy of an element.
+            $("#target5").clone().appendTo("#left-well");
+            //jQuery has a function called parent() that allows you to access the parent of whichever element you've selected.
+            $("#target1").parent().css("background-color","red");
+            //jQuery has a function called children() that allows you to access the children of whichever element you've selected.
+            $("#right-well").children().css("color", "orange")
+            //jQuery uses CSS Selectors to target elements. The target:nth-child(n) CSS selector allows you to select all the nth elements with the target class or element type.
+            $(".target:nth-child(2)").addClass(" animated bounce");
+            //You can also target elements based on their positions using :odd or :even selectors.
+            $(".target:even").addClass("shake");
+            //jQuery can target the body element as well.
+            $("body").addClass("animated fadeOut");
+
+            
+
+        });
+    </script>
+
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>#left-well</h4>
+            <div class="well" id="left-well">
+              <button class="btn btn-default target" id="target1">#target1</button>
+              <button class="btn btn-default target" id="target2">#target2</button>
+              <button class="btn btn-default target" id="target3">#target3</button>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <h4>#right-well</h4>
+            <div class="well" id="right-well">
+              <button class="btn btn-default target" id="target4">#target4</button>
+              <button class="btn btn-default target" id="target5">#target5</button>
+              <button class="btn btn-default target" id="target6">#target6</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
